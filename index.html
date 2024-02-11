@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal Web</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <div class="background">
+        <div id="app_view" class="app-view">
+            <div id="app" class="app">
+                <div class="sidebar">
+                    <div id="btn_home" class="sidebar-icon active">
+                        <img alt="Home" src="./public/icons/Icon=house.fill.svg" />
+                    </div>
+                    <div id="btn_project" class="sidebar-icon">
+                        <img alt="Projects" src="./public/icons/Icon=hammer.fill.svg" />
+                    </div>
+                    <div id="btn_about" class="sidebar-icon">
+                        <img alt="About" src="./public/icons/Icon=info.circle.fill.svg" />
+                    </div>
+                </div>
+                <div class="view">
+                    <div id="view_home">
+                        <h1>Home</h1>
+                        <p>Welcome to my personal website! This is a Apple Vision Pro's UI inspired.</p>
+                    </div>
+                    <div id="view_project">
+                        <h1>Projects</h1>
+                        <div class="icons-grid">
+                            <div class="icons">
+                                <a title="Very Soon" rel="noopener" target="_blank">
+                                    <div class="icon disabled">
+                                        <img alt="Mangetite" src="./public/icons/Icon=person.bubble.fill.svg" />
+                                    </div>
+                                </a>
+                                <h2 class="header">
+                                    Mangetite
+                                </h2>
+                            </div>
+                            <div class="icons">
+                                <a rel="noopener" href="https://bloom-blog.vercel.app/" target="_blank">
+                                    <div class="icon">
+                                        <img alt="Mangetite" src="./public/icons/Icon=book.fill.svg" class="hero" />
+                                    </div>
+                                </a>
+                                <h2 class="header">
+                                    Blog
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view_about">
+                        <h1>About</h1>
+                        <p>This web page was developed by Bloom Perez.</p>
+                        <p>Created with <a rel="noopener" href="https://code.visualstudio.com" target="_blank">Visual
+                                Studio Code</a></p>
+                        <p>Version 1.0.0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div id="close">
+                    <img alt="Close" src="./public/icons/Icon=xmark.svg" />
+                </div>
+                <span id="handler">
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/main.js" async defer></script>
+</body>
+
+</html>
