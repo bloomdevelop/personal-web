@@ -4,76 +4,107 @@
 <head>
     <meta charset="utf-8">
     <title>Personal Web</title>
-    <meta name="description" content="">
+    <meta name="description" content="A new personal web made by Bloom Perez">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/index.css">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "iksgqm6t4s");
+    </script>
+
 </head>
 
 <body>
-    <div class="background">
-        <div id="app_view" class="app-view">
-            <div id="app" class="app">
-                <div class="sidebar">
-                    <div id="btn_home" class="sidebar-icon active">
-                        <img alt="Home" src="./public/icons/Icon=house.fill.svg" />
-                    </div>
-                    <div id="btn_project" class="sidebar-icon">
-                        <img alt="Projects" src="./public/icons/Icon=hammer.fill.svg" />
-                    </div>
-                    <div id="btn_about" class="sidebar-icon">
-                        <img alt="About" src="./public/icons/Icon=info.circle.fill.svg" />
-                    </div>
+    <main>
+        <section id="s-main">
+            <h1>Hi I'm <span>Bloom Perez</span>! I build <span id="secondary">web apps</span></h1>
+            <p>Welcome to my new personal web, please follow the arrow :)</p>
+            <img id="scroll-icon" src="public/ic_fluent_arrow_sort_down_24_filled.svg"
+                alt=" ic_fluent_arrow_sort_down_24_filled" />
+        </section>
+        <section id="s-about">
+            <h1 id="about">About me</h1>
+            <p>Hi! I'm Bloom Perez, I am a gay furry who decidated to make a web apps and tools to something useful (and useless too)</p>
+            <p>I've been coding since 2018 where I worked with html, css and javascript, but today I'm learning something new (such as new language like C# and Lua/Luau)</p>
+        </section>
+        <section id="s-project">
+            <h1 id="project">My Projects</h1>
+            <p>This is my projects I've made during this time, but some quality may vary.</p>
+            <p>Most project where made different frameworks (but most are discontinued), also some repository are in
+                different git provider.</p>
+            <div id="cards">
+                <div id="card">
+                    <header>
+                        <h1>Gemini For Revolt</h1>
+                        <p>From Github</p>
+                    </header>
+                    <p>
+                        I made this bot for fun while I was bored, so I've decided to use
+                        <code>revolt.js@7.0.0_beta.11</code> (sorry, no discord version)
+                    </p>
+                    <p>This bot is just self explanatory, since he was able to talk if where a person talking in your
+                        server. Also it does use Gemini API by Google</p>
                 </div>
-                <div class="view">
-                    <div id="view_home">
-                        <h1>Home</h1>
-                        <p>Welcome to my personal website! This is a Apple Vision Pro's UI inspired.</p>
-                    </div>
-                    <div id="view_project">
-                        <h1>Projects</h1>
-                        <div class="icons-grid">
-                            <div class="icons">
-                                <a title="Very Soon" rel="noopener" target="_blank">
-                                    <div class="icon disabled">
-                                        <img alt="Mangetite" src="./public/icons/Icon=person.bubble.fill.svg" />
-                                    </div>
-                                </a>
-                                <h2 class="header">
-                                    Mangetite
-                                </h2>
-                            </div>
-                            <div class="icons">
-                                <a rel="noopener" href="https://bloom-blog.vercel.app/" target="_blank">
-                                    <div class="icon">
-                                        <img alt="Mangetite" src="./public/icons/Icon=book.fill.svg" class="hero" />
-                                    </div>
-                                </a>
-                                <h2 class="header">
-                                    Blog
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="view_about">
-                        <h1>About</h1>
-                        <p>This web page was developed by Bloom Perez.</p>
-                        <p>Created with <a rel="noopener" href="https://code.visualstudio.com" target="_blank">Visual
-                                Studio Code</a></p>
-                        <p>Version 1.0.0</p>
-                    </div>
+                <div id="card">
+                    <header>
+                        <h1>Personal Web (You are here!)</h1>
+                        <p>From Github</p>
+                    </header>
+                    <p>
+                        This website was mostly made with html and css. Instead of using a web framework (or something
+                        osbcure you aren't supposed to do), I decided to make lightweight as possible.
+                    </p>
+                </div>
+                <div id="card">
+                    <header>
+                        <h1>Magnetite</h1>
+                        <p>From Codeberg</p>
+                    </header>
+                    <p>
+                        A <code>Solid.js</code> revolt client that has <i>some features</i> (most are missing). It's was
+                        forked from Solenoid before my sister made Dumling disappear out of thin air. (I think it's a
+                        lore????)
+                    </p>
+                </div>
+                <div id="card">
+                    <header>
+                        <h1>Blog</h1>
+                        <p>From Github</p>
+                    </header>
+                    <p>
+                        A material 3 styled blog (and yes, it was bit misleading, no wonder I messed up the search
+                        thingy), used to post here... Sort of, bit rarely due my mind realize my blog doesn't exist.
+                    </p>
+                    <p>It was created with Astro, if you didn't know.</p>
+                </div>
+                <div id="card">
+                    <header>
+                        <h1>ReChat</h1>
+                        <p>From Github</p>
+                    </header>
+                    <p>
+                        Another <code>Solid.js</code> revolt client. But it's <i>verrrry</i> rushed as hell (and it's very buggy and slow as f*ck). But unforunately, it was discontinued due how unmaintainable the client was (yes, it was made extacly <b>12 hours non-stop</b>, please forgive me what I have done). 
+                    </p>
                 </div>
             </div>
-            <div class="toolbar">
-                <div id="close">
-                    <img alt="Close" src="./public/icons/Icon=xmark.svg" />
-                </div>
-                <span id="handler">
-
-                </span>
+        </section>
+        <section id="s-info">
+            <h1 id="info">Information</h1>
+            <p>You can email in <code>bloomdevelop@proton.me</code> whatever you want, if I am not avaiable, then go
+                email at icloud version on <code>bloomdevelop@icloud.com</code>, so please, do don't spam both emails,
+                otherwise I might block you temporaly (if you can't stop, y'know I can perm block you)</p>
+            <div id="bsky-card">
+                <h1>Bluesky</h1>
+                <p>I have <code>bsky.app</code> (or Bluesky) account, where I sometimes write a post or an reply
+                    from someone post (rarely repost something important)</p>
+                <a href="https://bsky.app/profile/bloom.swifties.social">Go to @bloom.swifties.social <img
+                        src="public/ic_fluent_link_24_filled.svg" </a>
             </div>
-        </div>
-    </div>
-    <script src="./scripts/main.js" async defer></script>
+        </section>
+    </main>
 </body>
 
 </html>

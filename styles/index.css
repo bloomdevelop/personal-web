@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,211 +7,162 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Useful (and useless) CSS properties */
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* ^ This one will be use as JetBrains Mono very soon */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* COLORS (and accent!) */
+    --accent: #60E2FC;
+    --secondary: #60FCAE;
+    --bg: rgb(0, 0, 0);
+    --gm-surface: rgba(0, 0, 0, .5);
+    --fg: rgb(255, 255, 255);
+    --shadow-subtle: 0 2px 10px rgba(0, 0, 0, .4);
+    --round-sm: .3rem;
+    --round-md: .5rem;
+    --round-lg: 1.2rem;
+}
+
 html,
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 100vw;
-    height: 100vh;
+    background-color: var(--bg);
+    color: var(--fg);
 }
 
-.background {
+section#s-main {
+    background-color: #6080FC;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 100vh;
-    background-image: url(../public/backgrounds/Apartment.jpg);
-    background-size: cover;
+    gap: .5rem;
+    padding-inline: 1.2rem;
+    line-height: normal !important;
 }
 
-.app {
+section#s-main>img#scroll-icon {
+    width: 30px;
+    height: 30px;
+}
+
+section#s-main h1 {
+    font-size: 3.5em;
+    text-wrap: balance;
+    text-align: center;
+}
+
+section#s-main h1>span {
+    color: var(--accent);
+    text-shadow: 0 0 24px  var(--accent);
+}
+
+section#s-main h1>span#secondary {
+    color: var(--secondary);
+    text-shadow: 0 0 24px  var(--secondary);
+}
+
+section#s-main p {
+    font-size: 1.5em;
+    text-wrap: balance;
+    text-align: center;
+}
+
+section {
+    line-height: 1.7em;
+    padding-inline: .5rem;
+    border-bottom: 2px solid #2f2f2f;
+}
+
+section:nth-child(1),
+section:nth-child(4) {
+    border-bottom: none;
+}
+
+#s-about,
+#s-project,
+#s-info {
+    padding: 1.5rem;
+}
+
+#s-about>h1,
+#s-project>h1,
+#s-info>h1 {
+    font-size: 2.3em;
+    margin-bottom: .5rem;
+}
+
+div#bsky-card {
+    --_bsky-accent: #60B1FC;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: var(--_bsky-accent);
+    color: black;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 100vmax var(--_bsky-accent);
+    clip-path: inset(0 -100vmax);
+}
+
+div#bsky-card>h1 {
+    font-size: 1.5em;
+}
+
+div#bsky-card>a {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: .5rem;
-    width: 100vw;
+    text-decoration: none;
+    color: black;
+    background-color: var(--accent);
+    padding: 0.5rem 1rem;
+    width: calc(100vw - 55%);
 }
 
-.view {
-    z-index: 10;
-    height: 400px !important;
-    width: 500px !important;
-    padding: 2rem;
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
-    backdrop-filter: blur(25px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 2rem;
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    height: 100%;
-    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+code {
+    font-family: "JetBrains Mono", 'Courier New', Courier, monospace;
+    display: block-inline;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding: .3rem;
 }
 
-.app-view {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.toolbar {
-    display: flex;
-    justify-content: center;
-    padding-inline: 1rem;
-    gap: 1rem;
-}
-
-.toolbar>#close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15px;
-    height: 15px;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 999px;
-    backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.6);
-
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-#close img {
-    transition: all 0.2s ease-in-out;
-    width: 12px;
-    height: 12px;
-    opacity: 0;
-}
-
-#close:hover>img {
-    opacity: 1;
-}
-
-#close:hover {
-    cursor: pointer;
-}
-
-.toolbar>#handler {
-    content: " ";
-    width: calc(100vw - 90%);
-    backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 999px;
-    cursor: grab;
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(25px) saturate(200%);
-    -webkit-backdrop-filter: blur(25px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(209, 213, 219, 0.3);
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
-    padding: 5px;
-    gap: .5rem;
-    border-radius: 999px;
-    height: min-content;
-}
-
-.sidebar-icon {
-    transition: all 0.2s ease-in-out;
-    cursor: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: transparent;
-    box-shadow: none;
-    border-radius: 999px;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-.sidebar-icon:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-}
-
-.sidebar-icon:active {
-    transform: scale(0.9);
-    scale: 0.9;
-}
-
-.sidebar-icon.active {
-    cursor: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: rgb(0, 122, 255);
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 999px;
-}
-
-.sidebar-icon.active img {
-    filter: invert(100%);
-}
-
-.icons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon  {
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    transition: all 0.2s ease-in-out;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    cursor: pointer;
-    border-radius: 999px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
-}
-
-.icon.disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-.icon.disabled:hover {
-    transform: scale(1);
-    scale: 1;
-}
-
-.icon.disabled:active {
-    transform: scale(1);
-    scale: 1;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    scale: 1.1;
-}
-.icon:active {
-    transform: scale(0.9);
-    scale: 0.9;
-}
-
-.icons-grid {
-    margin-top: 1rem;
+div#cards {
+    width: fit-content;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: .3rem;
+}
+
+div#cards>header {
+    text-wrap: balance;
+}
+
+div#card {
+    background-color: var(--secondary);
+    color: black;
+    padding: .5rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    div#cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    div#cards {
+        grid-template-columns: 1fr;
+    }
 }
