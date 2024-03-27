@@ -1,0 +1,45 @@
+# I allow to search to show up the result
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 10
+
+# AI and other crawlers: You can't win, let us crawl ur site.
+# Me: Nah I'd win.
+
+User-agent: Baiduspider
+Disallow: /
+
+# Fuck you Mark.
+User-agent: facebot
+Disallow: /
+
+# Fuck you too Musk.
+User-agent: TwitterBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
