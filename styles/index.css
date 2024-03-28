@@ -219,9 +219,32 @@ div#s-card {
     width: 100%;
 }
 
+div#s-card.subtle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: .5rem;
+    align-items: center;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+div#s-card.sutble > header {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
 div#s-card>img {
     width: 70px;
     height: 70px;
+}
+
+img#overflow {
+    width: 140%;
+    height: 100%;
 }
 
 div#flex-row {
