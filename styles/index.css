@@ -228,6 +228,10 @@ div#s-card {
     padding: .7rem;
 }
 
+#close_banner {
+    cursor: pointer;
+}
+
 div#s-card>img {
     width: 70px;
     height: 70px;
