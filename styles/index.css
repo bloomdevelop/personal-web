@@ -19,6 +19,7 @@
     /* ^ This one will be use as JetBrains Mono very soon */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    cursor: none;
 
     /* COLORS (and accent!) */
     --accent: #60E2FC;
@@ -161,6 +162,7 @@ div#fw-card>h1 {
 }
 
 div#fw-card>a {
+    cursor: none;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -258,6 +260,26 @@ div#flex-col {
     flex-direction: column;
     gap: 0;
     margin-top: 1.5rem;
+}
+
+/* Custom Cursor */
+span#cursor {
+    z-index: 1000;
+    transition: 300ms opacity ease, 300ms width ease, 300ms height ease;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    opacity: 0;
+    backdrop-filter: invert(100%) sepia(100%) saturate(0%);
+}
+
+span#cursor::before {
+    content: "";
 }
 
 @keyframes gradient {
