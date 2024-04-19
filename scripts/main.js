@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const close_banner = document.getElementById("close_banner");
     const banner_closed = JSON.parse(window.localStorage.getItem("banner_closed"))
     const cursor = document.getElementById("cursor")
-    const link = document.getElementById("link")
+    const year = document.getElementById("year")
+
+    year.innerHTML = new Date().getFullYear();
 
     if (banner_closed === true) {
         banner.style.display = "none";
@@ -20,18 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("mouseleave", () => {
         cursor.style.opacity = 0
-    })
-
-    link.addEventListener("mouseenter", () => {
-        cursor.style.width = "40px"
-        cursor.style.height = "40px"
-        cursor.style.borderRadius = "12px"
-    })
-
-    link.addEventListener("mouseleave", () => {
-        cursor.style.width = "30px"
-        cursor.style.height = "30px"
-        cursor.style.borderRadius = "99px"
     })
 
     document.addEventListener("mousemove", (e) => {

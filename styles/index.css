@@ -16,30 +16,39 @@
 :root {
     /* Useful (and useless) CSS properties */
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* ^ This one will be use as JetBrains Mono very soon */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: none;
 
-    /* COLORS (and accent!) */
-    --accent: #60E2FC;
-    --secondary: #60FCAE;
-    --tertiary: #F05189;
-    --bg: rgb(0, 0, 0);
-    --fg: rgb(255, 255, 255);
-    --cm-accent: #47a7ba;
-    --cm-secondary: #43b07a;
+    /* COLORS */
+    --text: #08090a;
+    --background: #f6f7fb;
+    --background-100: #dde0ee;
+    --background-200: #dde0ee;
+    --background-300: #99a3cc;
+    --primary: #3a5cc6;
+    --secondary: #819bee;
+    --accent: #416efd;
+    --accent-300: #688bfd;
+    --accent-600: #0231ca;
 }
 
 html,
 body {
-    background-color: var(--bg);
-    color: var(--fg);
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a {
+    cursor: none;
+}
+
+button {
+    cursor: none;
 }
 
 section#s-main {
-    background-color: #6080FC;
-    color: black;
+    color: --text;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +59,8 @@ section#s-main {
     line-height: normal !important;
 }
 
-section#s-main>img#scroll-icon {
+section#s-main>#scroll-icon {
+    color: currentColor;
     width: 30px;
     height: 30px;
     animation: bounce .5s infinite alternate cubic-bezier(0, 0, .5, 1);
@@ -68,7 +78,7 @@ span#pride {
 
 span#accent {
     font-weight: bold;
-    color: var(--accent)
+    color: var(--accent-600);
 }
 
 
@@ -79,18 +89,16 @@ section#s-main h1 {
 }
 
 section#s-main h1>span {
-    background: repeating-linear-gradient(90deg, var(--accent), var(--cm-accent), var(--accent));
+    background: var(--primary);
     background-size: 400% 400%;
-    animation: gradient 5s infinite linear;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 section#s-main h1>span#secondary {
-    background: repeating-linear-gradient(90deg, var(--secondary), var(--cm-secondary), var(--secondary));
+    background: var(--accent-600);
     background-size: 400% 400%;
-    animation: gradient 5s infinite linear;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -131,30 +139,22 @@ section:nth-child(4) {
 }
 
 div#fw-card {
-    --_bsky-accent: #60B1FC;
-    --_discord-accent: #9C4BDB;
-    --_revolt-accent: #D9654C;
+    z-index: 0 !important;
     display: flex;
     flex-direction: column;
     gap: .5rem;
     width: 100%;
-    background-color: var(--_bsky-accent);
-    color: black;
-    padding: 0.5rem;
+    background-color: var(--background-100);
+    color: currentColor;
+    padding: 0.5rem 1rem;
     box-sizing: border-box;
-    box-shadow: 0 0 0 100vmax var(--_bsky-accent);
     clip-path: inset(0 -100vmax);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-div#fw-card:nth-child(2) {
-    background-color: var(--_discord-accent);
-    color: white;
-    box-shadow: 0 0 0 100vmax var(--_discord-accent);
-}
-
-div#fw-card:nth-child(3) {
-    background-color: var(--_revolt-accent);
-    box-shadow: 0 0 0 100vmax var(--_revolt-accent);
+div#fw-card:nth-last-child() {
+    margin-bottom: 0;
 }
 
 div#fw-card>h1 {
@@ -167,11 +167,15 @@ div#fw-card>a {
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--text);
     background-color: var(--accent);
     gap: .5rem;
     padding: 0.5rem 1rem;
     width: fit-content;
+}
+
+div#fw-card>a:hover {
+    background-color: var(--accent-300)
 }
 
 code {
@@ -202,9 +206,9 @@ div#cards>header {
 }
 
 div#card {
-    background-color: var(--secondary);
-    color: black;
-    padding: .5rem;
+    background-color: var(--background-100);
+    color: currentColor;
+    padding: 0.5rem 1rem;
     width: 100%;
 }
 
@@ -215,8 +219,8 @@ div#s-card {
     gap: .5rem;
     align-items: center;
     text-decoration: none;
-    color: black;
-    background-color: var(--accent);
+    color: currentColor;
+    background-color: var(--background-100);
     padding: 0.5rem 1rem;
     width: 100%;
 }
@@ -226,12 +230,14 @@ div#s-card {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    background-color: #9C4BDB;
-    padding: .7rem;
+    background-color: var(--accent);
+    margin: .7rem;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
 }
 
 img#close_banner {
-    cursor: pointer;
+    cursor: none;
 }
 
 div#s-card>img {
@@ -264,8 +270,8 @@ div#flex-col {
 
 /* Custom Cursor */
 span#cursor {
-    z-index: 1000;
-    transition: 300ms opacity ease, 300ms width ease, 300ms height ease;
+    z-index: 123456789;
+    transition: 150ms cubic-bezier(0,0,.5,1);
     pointer-events: none;
     position: fixed;
     top: 0;
@@ -275,11 +281,68 @@ span#cursor {
     height: 30px;
     border-radius: 999px;
     opacity: 0;
-    backdrop-filter: invert(100%) sepia(100%) saturate(0%);
+    backdrop-filter: saturate(0%) invert(999%);
 }
 
 span#cursor::before {
     content: "";
+}
+
+nav.navigation {
+    z-index: 999999;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem .7rem;
+    align-items: center;
+    animation: intoSolid linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100vh;
+    animation-range-end: 180vh;
+    color: currentColor;
+}
+
+nav.navigation > div.nav-links > a {
+    transition: background 300ms ease;
+    color: var(--text);
+    padding: .3rem .7rem;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+nav.navigation > div.nav-links > a:hover {
+    background: var(--background-100);
+
+}
+
+footer.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+footer.site-footer>div.footer-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ANIMATIONS */
+
+@keyframes intoSolid {
+    0% {
+        background: var(--background);
+        border-bottom: 2px solid transparent;
+    }
+
+    100% {
+        background: var(--background-200);
+        border-bottom: 2px solid var(--background-300);
+    }
 }
 
 @keyframes gradient {
@@ -299,6 +362,22 @@ span#cursor::before {
 
     from {
         transform: translateY(30px);
+    }
+}
+
+/* MEDIA QUERIES */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #f4f5f6;
+        --background: #05060b;
+        --background-100: #111422;
+        --background-200: #222944;
+        --background-300: #333d66;
+        --primary: #395cc6;
+        --secondary: #112a7e;
+        --accent: #022ec0;
+        --accent-300: #022597;
+        --accent-600: #3564fd;
     }
 }
 

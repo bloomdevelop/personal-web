@@ -1,4 +1,4 @@
-# I allow to search to show up the result
+# I'm going to allow to search to show up the result
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 10

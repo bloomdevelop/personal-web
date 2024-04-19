@@ -3,34 +3,52 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Personal Web</title>
+    <!-- Title -->
+    <title>Bloom's Site</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon">
+    <!-- Web Scrapping -->
     <meta name="Googlebot"
         content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache">
     <meta name="Bingbot"
         content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache">
+    <!-- Embeds -->
     <meta name="description" content="A new personal web made by Bloom Perez">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/md-symbols.css">
     <!-- Main Script -->
-    <script type="text/javascript" src="scripts/main.js">        
+    <script type="text/javascript" src="scripts/main.js">
     </script>
 </head>
 
 <body>
     <!-- Custom Cursor -->
     <span id="cursor"></span>
+    <nav class="navigation">
+        <h1>Bloom's Site</h1>
+        <div class="nav-links">
+            <a href="#s-about">Introduction</a>
+            <a href="#s-project">Projects</a>
+            <a href="#s-info">Information</a>
+        </div>
+    </nav>
     <main>
         <div id="banner">
-            <p>Microsoft Clarity has been removed in April 3rd, I'm working on the recent 
+            <p>Microsoft Clarity has been removed in April 3rd, I'm working on the recent
                 post to inform about the incident. Thank you for being patient.</p>
-                <img id="close_banner" title="Close Banner" alt="Close Banner" src="public/ic_fluent_alert_off_24_filled.svg"/>
+            <span id="close_banner" class="material-symbols-outlined">
+                ad_off
+            </span>
         </div>
         <section id="s-main">
             <h1>Hi I'm <span>Bloom Perez</span>! I build <span id="secondary">web apps</span></h1>
             <p>Welcome to my new personal web, please follow the arrow (please don't get distracted by a bouncing
                 arrow!)</p>
-            <img id="scroll-icon" src="public/ic_fluent_arrow_sort_down_24_filled.svg"
-                alt=" ic_fluent_arrow_sort_down_24_filled" />
+            <span id="scroll-icon" class="material-symbols-outlined">
+                expand_more
+            </span>
         </section>
         <section id="s-about">
             <h1 id="about">About me</h1>
@@ -140,7 +158,7 @@
                     </header>
                     <p>
                         An client what I'm helping to Amy to design his app that is designed for Android.
-                        (No iOS version but I'll do it if I had an MacBook :c) 
+                        (No iOS version but I'll do it if I had an MacBook :c)
                     </p>
                     <p>Currently in W.I.P (Work in Progress)...</p>
                 </div>
@@ -156,8 +174,10 @@
                     <h1>Bluesky</h1>
                     <p>I have <code>bsky.app</code> (or Bluesky) account, where I sometimes write a post or an reply
                         from someone post (rarely repost something important)</p>
-                    <a id="link" target="_blank" rel="noscope" href="https://bsky.app/profile/bloom.swifties.social">Go to @bloom.swifties.social <img
-                            src="public/ic_fluent_window_new_24_filled.svg" alt="New Window" /> </a>
+                    <a id="link" target="_blank" rel="noscope" href="https://bsky.app/profile/bloom.swifties.social">Go
+                        to @bloom.swifties.social <span class="material-symbols-outlined">
+                            captive_portal
+                        </span> </a>
                 </div>
                 <div id="fw-card">
                     <h1>Discord</h1>
@@ -172,6 +192,23 @@
                 </div>
             </div>
         </section>
+        <footer class="site-footer">
+            <div class="footer-flex">
+                <p>
+                    Developed with
+                </p>
+                <span class="material-symbols-outlined">
+                    html
+                </span>
+                <span class="material-symbols-outlined">
+                    css
+                </span>
+                <span class="material-symbols-outlined">
+                    javascript
+                </span>
+            </div>
+            <p>Hosted in Github | Made by Bloom (<span id="year"></span>)</p>
+        </footer>
     </main>
 </body>
 
