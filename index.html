@@ -21,6 +21,8 @@
     <!-- Main Script -->
     <script type="text/javascript" src="scripts/main.js">
     </script>
+    <!-- Preconnecting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -32,182 +34,180 @@
             <a href="#s-info">Information</a>
         </div>
     </nav>
-    <main>
-        <div id="banner">
-            <p>Microsoft Clarity has been removed in April 3rd, I'm working on the recent
-                post to inform about the incident. Thank you for being patient.</p>
-            <span id="close_banner" class="material-symbols-outlined">
-                ad_off
+    <div id="banner">
+        <p>Microsoft Clarity has been removed in April 3rd, I'm working on the recent
+            post to inform about the incident. Thank you for being patient.</p>
+        <span id="close_banner" class="material-symbols-outlined">
+            ad_off
+        </span>
+    </div>
+    <section id="s-main">
+        <h1>Hi I'm <span>Bloom Perez</span>! I build <span id="secondary">web apps</span></h1>
+        <p>Welcome to my new personal web, please follow the arrow (please don't get distracted by a bouncing
+            arrow!)</p>
+        <span id="scroll-icon" class="material-symbols-outlined">
+            expand_more
+        </span>
+    </section>
+    <section id="s-about">
+        <h1 id="about">About me</h1>
+        <div id="flex-row">
+            <!-- <div> inside <div>, wow... -->
+            <div>
+                <p>Hi! I'm Bloom Perez, I am a <span title="Enjoy this cool gradient animation :D" id="pride">gay</span>
+                    furry who decidated to make a web apps and tools to something
+                    useful (and
+                    useless too)</p>
+                <p>I've been coding since 2018 where I worked with html, css and javascript, but today I'm learning
+                    something new (such as new language like C# and Lua/Luau)</p>
+            </div>
+            <img alt="Pride Flag" title="Pride Flag" src="public/ic_fluent_flag_pride_24_filled.svg" />
+        </div>
+
+        <h1 id="sub-t">Statistics</h1>
+        <div id="s-cards">
+            <div id="s-card">
+                <header>
+                    <h1>Most used (GUI) Editor</h1>
+                    <p>Visual Studio Code, following others editor like Fleet (Public Preview). I've been using for
+                        years since it's easy to use, I'm able to install some extension to make <code>code</code>
+                        much better, unlike other editors that doesn't has this feature</p>
+                </header>
+                <img title="Visual Studio Code Logo" alt="Visual Studio Code Logo"
+                    src="public/icons8-visual-studio-code.svg" />
+            </div>
+            <div id="s-card">
+                <header>
+                    <h1>Favorite Language</h1>
+                    <p>Javascript/Typescript, I mostly use this language for web frameworks, such like
+                        <code>Solid.js</code>, <code>Astro</code> and other more. But I do use for my bots via
+                        <code>Node.js</code>
+                    </p>
+                </header>
+                <img title="Visual Studio Code Logo" alt="Javascript Logo" src="public/icons8-javascript.svg" />
+            </div>
+        </div>
+    </section>
+    <section id="s-project">
+        <h1 id="project">My Projects</h1>
+        <p>This is my projects I've made during this time, but the quality <i>may</i> vary.</p>
+        <p>Most project where made different frameworks (but most are discontinued), also some repository are in
+            different git provider.</p>
+        <div id="cards">
+            <div id="card">
+                <header>
+                    <h1>Gemini For Revolt</h1>
+                    <p>From Github</p>
+                </header>
+                <p>
+                    I made this bot for fun while I was bored, so I've decided to use
+                    <code>revolt.js@7.0.0_beta.11</code> (sorry, no discord version) just for fun
+                </p>
+                <p>This bot is just self explanatory, since he was able to talk if where a person talking in your
+                    server. Also it does use Gemini API by Google</p>
+            </div>
+            <div id="card">
+                <header>
+                    <h1>Personal Web (You are here!)</h1>
+                    <p>From Github</p>
+                </header>
+                <p>
+                    This website was mostly made with html and css. Instead of using a web framework (or something
+                    osbcure you aren't supposed to do), I decided to make lightweight as possible.
+                </p>
+            </div>
+            <div id="card">
+                <header>
+                    <h1>Magnetite</h1>
+                    <p>From Codeberg</p>
+                </header>
+                <p>
+                    A <code>Solid.js</code> revolt client that has <i>some features</i> (most are missing). It's was
+                    forked from Solenoid before my sister made Dumling disappear out of thin air. (I think it's a
+                    lore????)
+                </p>
+            </div>
+            <div id="card">
+                <header>
+                    <h1>Blog</h1>
+                    <p>From Github</p>
+                </header>
+                <p>
+                    A material 3 styled blog (and yes, it was bit misleading, no wonder I messed up the search
+                    thingy), used to post here... Sort of, bit rarely due my mind realize my blog doesn't exist.
+                </p>
+                <p>It was created with Astro, if you didn't know.</p>
+            </div>
+            <div id="card">
+                <header>
+                    <h1>ReChat</h1>
+                    <p>From Github</p>
+                </header>
+                <p>
+                    Another <code>Solid.js</code> revolt client. But it's <i>verrrry</i> rushed as hell (and it's
+                    very buggy and slow as f*ck). But unforunately, it was discontinued due how unmaintainable the
+                    client was (yes, it was made extacly <b>12 hours non-stop</b>, please forgive me what I have
+                    done).
+                </p>
+            </div>
+            <div id="card">
+                <header>
+                    <h1>Crescent</h1>
+                    <p>From Github (Public, Shared Repository)</p>
+                </header>
+                <p>
+                    An client what I'm helping to Amy to design his app that is designed for Android.
+                    (No iOS version but I'll do it if I had an MacBook :c)
+                </p>
+                <p>Currently in W.I.P (Work in Progress)...</p>
+            </div>
+        </div>
+    </section>
+    <section id="s-info">
+        <h1 id="info">Information</h1>
+        <p>You can email in <code>bloomdevelop@proton.me</code> whatever you want, if I am not avaiable, then go
+            email at icloud version on <code>bloomdevelop@icloud.com</code>, so please, do don't spam both emails,
+            otherwise I might block you temporaly (if you can't stop, y'know I can perm block you)</p>
+        <div id="flex-col">
+            <div id="fw-card">
+                <h1>Bluesky</h1>
+                <p>I have <code>bsky.app</code> (or Bluesky) account, where I sometimes write a post or an reply
+                    from someone post (rarely repost something important)</p>
+                <a id="link" target="_blank" rel="noscope" href="https://bsky.app/profile/bloom.swifties.social">Go
+                    to @bloom.swifties.social <span class="material-symbols-outlined">
+                        captive_portal
+                    </span> </a>
+            </div>
+            <div id="fw-card">
+                <h1>Discord</h1>
+                <p>I do have discord, which I normally use due I joined for a while ago. But you can dm me to <span
+                        id="accent">@bloomdevelop</span> if you have question.</p>
+            </div>
+            <div id="fw-card">
+                <h1>Revolt</h1>
+                <p>This one, well. I haven't used so much, mostly for my sister everytime she share an link (but
+                    it's now in Signal instead). Please dm me on <span id="accent">Bloom#3049</span>, no matter when
+                    you spam alot here, since I'm not using alot, but only bot development :P</p>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-flex">
+            <p>
+                Developed with
+            </p>
+            <span class="material-symbols-outlined">
+                html
+            </span>
+            <span class="material-symbols-outlined">
+                css
+            </span>
+            <span class="material-symbols-outlined">
+                javascript
             </span>
         </div>
-        <section id="s-main">
-            <h1>Hi I'm <span>Bloom Perez</span>! I build <span id="secondary">web apps</span></h1>
-            <p>Welcome to my new personal web, please follow the arrow (please don't get distracted by a bouncing
-                arrow!)</p>
-            <span id="scroll-icon" class="material-symbols-outlined">
-                expand_more
-            </span>
-        </section>
-        <section id="s-about">
-            <h1 id="about">About me</h1>
-            <div id="flex-row">
-                <!-- <div> inside <div>, wow... -->
-                <div>
-                    <p>Hi! I'm Bloom Perez, I am a <span title="Enjoy this cool gradient animation :D"
-                            id="pride">gay</span> furry who decidated to make a web apps and tools to something
-                        useful (and
-                        useless too)</p>
-                    <p>I've been coding since 2018 where I worked with html, css and javascript, but today I'm learning
-                        something new (such as new language like C# and Lua/Luau)</p>
-                </div>
-                <img alt="Pride Flag" title="Pride Flag" src="public/ic_fluent_flag_pride_24_filled.svg" />
-            </div>
-
-            <h1 id="sub-t">Statistics</h1>
-            <div id="s-cards">
-                <div id="s-card">
-                    <header>
-                        <h1>Most used (GUI) Editor</h1>
-                        <p>Visual Studio Code, following others editor like Fleet (Public Preview). I've been using for
-                            years since it's easy to use, I'm able to install some extension to make <code>code</code>
-                            much better, unlike other editors that doesn't has this feature</p>
-                    </header>
-                    <img title="Visual Studio Code Logo" alt="Visual Studio Code Logo"
-                        src="public/icons8-visual-studio-code.svg" />
-                </div>
-                <div id="s-card">
-                    <header>
-                        <h1>Favorite Language</h1>
-                        <p>Javascript/Typescript, I mostly use this language for web frameworks, such like
-                            <code>Solid.js</code>, <code>Astro</code> and other more. But I do use for my bots via
-                            <code>Node.js</code>
-                        </p>
-                    </header>
-                    <img title="Visual Studio Code Logo" alt="Javascript Logo" src="public/icons8-javascript.svg" />
-                </div>
-            </div>
-        </section>
-        <section id="s-project">
-            <h1 id="project">My Projects</h1>
-            <p>This is my projects I've made during this time, but the quality <i>may</i> vary.</p>
-            <p>Most project where made different frameworks (but most are discontinued), also some repository are in
-                different git provider.</p>
-            <div id="cards">
-                <div id="card">
-                    <header>
-                        <h1>Gemini For Revolt</h1>
-                        <p>From Github</p>
-                    </header>
-                    <p>
-                        I made this bot for fun while I was bored, so I've decided to use
-                        <code>revolt.js@7.0.0_beta.11</code> (sorry, no discord version) just for fun
-                    </p>
-                    <p>This bot is just self explanatory, since he was able to talk if where a person talking in your
-                        server. Also it does use Gemini API by Google</p>
-                </div>
-                <div id="card">
-                    <header>
-                        <h1>Personal Web (You are here!)</h1>
-                        <p>From Github</p>
-                    </header>
-                    <p>
-                        This website was mostly made with html and css. Instead of using a web framework (or something
-                        osbcure you aren't supposed to do), I decided to make lightweight as possible.
-                    </p>
-                </div>
-                <div id="card">
-                    <header>
-                        <h1>Magnetite</h1>
-                        <p>From Codeberg</p>
-                    </header>
-                    <p>
-                        A <code>Solid.js</code> revolt client that has <i>some features</i> (most are missing). It's was
-                        forked from Solenoid before my sister made Dumling disappear out of thin air. (I think it's a
-                        lore????)
-                    </p>
-                </div>
-                <div id="card">
-                    <header>
-                        <h1>Blog</h1>
-                        <p>From Github</p>
-                    </header>
-                    <p>
-                        A material 3 styled blog (and yes, it was bit misleading, no wonder I messed up the search
-                        thingy), used to post here... Sort of, bit rarely due my mind realize my blog doesn't exist.
-                    </p>
-                    <p>It was created with Astro, if you didn't know.</p>
-                </div>
-                <div id="card">
-                    <header>
-                        <h1>ReChat</h1>
-                        <p>From Github</p>
-                    </header>
-                    <p>
-                        Another <code>Solid.js</code> revolt client. But it's <i>verrrry</i> rushed as hell (and it's
-                        very buggy and slow as f*ck). But unforunately, it was discontinued due how unmaintainable the
-                        client was (yes, it was made extacly <b>12 hours non-stop</b>, please forgive me what I have
-                        done).
-                    </p>
-                </div>
-                <div id="card">
-                    <header>
-                        <h1>Crescent</h1>
-                        <p>From Github (Public, Shared Repository)</p>
-                    </header>
-                    <p>
-                        An client what I'm helping to Amy to design his app that is designed for Android.
-                        (No iOS version but I'll do it if I had an MacBook :c)
-                    </p>
-                    <p>Currently in W.I.P (Work in Progress)...</p>
-                </div>
-            </div>
-        </section>
-        <section id="s-info">
-            <h1 id="info">Information</h1>
-            <p>You can email in <code>bloomdevelop@proton.me</code> whatever you want, if I am not avaiable, then go
-                email at icloud version on <code>bloomdevelop@icloud.com</code>, so please, do don't spam both emails,
-                otherwise I might block you temporaly (if you can't stop, y'know I can perm block you)</p>
-            <div id="flex-col">
-                <div id="fw-card">
-                    <h1>Bluesky</h1>
-                    <p>I have <code>bsky.app</code> (or Bluesky) account, where I sometimes write a post or an reply
-                        from someone post (rarely repost something important)</p>
-                    <a id="link" target="_blank" rel="noscope" href="https://bsky.app/profile/bloom.swifties.social">Go
-                        to @bloom.swifties.social <span class="material-symbols-outlined">
-                            captive_portal
-                        </span> </a>
-                </div>
-                <div id="fw-card">
-                    <h1>Discord</h1>
-                    <p>I do have discord, which I normally use due I joined for a while ago. But you can dm me to <span
-                            id="accent">@bloomdevelop</span> if you have question.</p>
-                </div>
-                <div id="fw-card">
-                    <h1>Revolt</h1>
-                    <p>This one, well. I haven't used so much, mostly for my sister everytime she share an link (but
-                        it's now in Signal instead). Please dm me on <span id="accent">Bloom#3049</span>, no matter when
-                        you spam alot here, since I'm not using alot, but only bot development :P</p>
-                </div>
-            </div>
-        </section>
-        <footer class="site-footer">
-            <div class="footer-flex">
-                <p>
-                    Developed with
-                </p>
-                <span class="material-symbols-outlined">
-                    html
-                </span>
-                <span class="material-symbols-outlined">
-                    css
-                </span>
-                <span class="material-symbols-outlined">
-                    javascript
-                </span>
-            </div>
-            <p>Hosted in Github | Made by Bloom (<span id="year"></span>)</p>
-        </footer>
-    </main>
+        <p>Hosted in Github | Made by Bloom (<span id="year"></span>)</p>
+    </footer>
 </body>
 
 </html>
