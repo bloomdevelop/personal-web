@@ -11,6 +11,7 @@
     -webkit-user-drag: none;
     -webkit-user-modify: none;
     user-select: none;
+    cursor: unset;
 }
 
 :root {
