@@ -18,7 +18,6 @@
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    cursor: none;
 
     /* COLORS */
     --text: #08090a;
@@ -37,14 +36,6 @@ html,
 body {
     background-color: var(--background);
     color: var(--text);
-}
-
-a {
-    cursor: none;
-}
-
-button {
-    cursor: none;
 }
 
 section#s-main {
@@ -162,7 +153,6 @@ div#fw-card>h1 {
 }
 
 div#fw-card>a {
-    cursor: none;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -237,7 +227,7 @@ div#s-card {
 }
 
 img#close_banner {
-    cursor: none;
+    cursor: pointer;
 }
 
 div#s-card>img {
@@ -266,26 +256,6 @@ div#flex-col {
     flex-direction: column;
     gap: 0;
     margin-top: 1.5rem;
-}
-
-/* Custom Cursor */
-span#cursor {
-    z-index: 123456789;
-    transition: 150ms cubic-bezier(0,0,.5,1);
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: transparent;
-    width: 30px;
-    height: 30px;
-    border-radius: 999px;
-    opacity: 0;
-    backdrop-filter: saturate(0%) invert(999%);
-}
-
-span#cursor::before {
-    content: "";
 }
 
 nav.navigation {

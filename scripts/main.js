@@ -23,9 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mouseleave", () => {
         cursor.style.opacity = 0
     })
-
-    document.addEventListener("mousemove", (e) => {
-        cursor.style.transform = `translate3d(${e.clientX - 20}px, ${e.clientY - 20}px, 0)`;
-    })
 })
 
