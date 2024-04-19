@@ -46,7 +46,7 @@ section#s-main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vmax;
     gap: .5rem;
     padding-inline: 1.2rem;
     line-height: normal !important;
@@ -333,7 +333,7 @@ footer.site-footer>div.footer-flex {
     }
 
     from {
-        transform: translateY(30px);
+        transform: translateY(10px);
     }
 }
 
