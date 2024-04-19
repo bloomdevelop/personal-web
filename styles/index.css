@@ -46,7 +46,7 @@ section#s-main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vmax;
+    height: 45.5vmax;
     gap: .5rem;
     padding-inline: 1.2rem;
     line-height: normal !important;
