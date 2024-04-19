@@ -46,9 +46,10 @@ section#s-main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 45.5vmax;
+    height: min-content;
     gap: .5rem;
     padding-inline: 1.2rem;
+    padding-bottom: 1.5rem;
     line-height: normal !important;
 }
 
