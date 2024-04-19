@@ -31,7 +31,7 @@
     --accent: #416efd;
     --accent-300: #688bfd;
     --accent-600: #0231ca;
-    --accent-950: #000619;
+    --accent-700: #022597;
 }
 
 html,
@@ -71,7 +71,7 @@ span#pride {
 
 span#accent {
     font-weight: bold;
-    color: var(--accent-950);
+    color: var(--accent-700);
 }
 
 
@@ -350,6 +350,7 @@ footer.site-footer>div.footer-flex {
         --accent: #022ec0;
         --accent-300: #022597;
         --accent-600: #3564fd;
+        --accent-700: #688bfd;
         --accent-950: #e6ecff;
     }
 }
