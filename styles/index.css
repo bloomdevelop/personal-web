@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&&display=swap/&display=optional/&display=fallback');
-
+@import url("../public/fonts/inter/inter.css");
+@import url("../public/fonts/jetbrain_mono/stylesheet.css");
 * {
     padding: 0;
     margin: 0;
@@ -361,6 +361,9 @@ footer.site-footer>div.footer-flex {
 }
 
 @media screen and (max-width: 750px) {
+    section#s-main h1 {
+        font-size: 3em;
+    }
     div#cards {
         grid-template-columns: 1fr 1fr;
     }
