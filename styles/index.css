@@ -1,15 +1,15 @@
 @import url("../public/fonts/inter/inter.css");
 @import url("../public/fonts/jetbrain_mono/stylesheet.css");
+
 * {
     padding: 0;
     margin: 0;
     inset: unset;
     box-sizing: border-box;
 
-    /*  Do don't use user select, drag and modify. You've warned. */
+    /*  Do don't use user select, drag. You've warned. */
     -webkit-user-select: none;
     -webkit-user-drag: none;
-    -webkit-user-modify: none;
     user-select: none;
     cursor: unset;
 }
@@ -38,6 +38,10 @@ html,
 body {
     background-color: var(--background);
     color: var(--text);
+}
+
+a {
+    cursor: pointer;
 }
 
 section#s-main {
@@ -134,6 +138,24 @@ section:nth-child(4) {
 #s-info>h1 {
     font-size: 2.3em;
     margin-bottom: .5rem;
+}
+
+#s-info>a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--accent);
+    margin-top: .5rem;
+    gap: .5rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+}
+
+
+#s-info>a:hover {
+    background-color: var(--accent-300);
 }
 
 div#fw-card {
@@ -270,6 +292,7 @@ nav.navigation {
     position: sticky;
     top: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: .5rem .7rem;
     align-items: center;
@@ -280,7 +303,17 @@ nav.navigation {
     color: currentColor;
 }
 
+nav.navigation>div.nav-links {
+    display: flex;
+    gap: .4rem;
+}
+
 nav.navigation>div.nav-links>a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
     transition: background 300ms ease;
     color: var(--text);
     padding: .3rem .7rem;
@@ -364,6 +397,7 @@ footer.site-footer>div.footer-flex {
     section#s-main h1 {
         font-size: 3em;
     }
+
     div#cards {
         grid-template-columns: 1fr 1fr;
     }
@@ -374,6 +408,10 @@ footer.site-footer>div.footer-flex {
 }
 
 @media screen and (max-width: 650px) {
+    nav.navigation>div.nav-links>a>span#link_name {
+        display: none;
+    }
+
     div#cards {
         grid-template-columns: 1fr;
     }
