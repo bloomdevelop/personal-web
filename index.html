@@ -27,7 +27,11 @@
         <div class="ui-column">
             <div class="ui-card">
                 <div class="ui-about-me">
-                    <img srcset="public/images/profile/pfp.webp" sizes="(max-width: 710px) 120px" alt="Bloom's pfp (the art isn't mine)" />
+                    <img sizes="(max-width: 800px) 100vw, 800px" srcset="
+                        ./public/images/profile/pfp,w_200.webp 200w,
+                        ./public/images/profile/pfp,w_582.webp 582w,
+                        ./public/images/profile/pfp,w_800.webp 800w" src="./public/images/profile/pfp,w_800.webp"
+                        alt="Bloom's pfp (the art isn't mine)">
                     <div class="ui-about-me-intro">
                         <h1>Hello!</h1>
                         <p>I'm Bloom, an gay catboy who likes to program some apps but am kinda lazy :(</p>
