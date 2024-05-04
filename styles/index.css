@@ -9,13 +9,7 @@
 }
 
 :root {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* Non-Standards */
-  font-smooth: always;
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
-
+  font-family: "Inter", sans-serif;
   /* Variables */
   --card-radius: calc(3vmax / 2);
 }
@@ -60,12 +54,11 @@ body {
 
 .ui-card {
   height: 100%;
-
   display: flex;
   flex-direction: column;
   gap: calc(1vmax / 2);
 
-  background-color: var(--background-100);
+  background-color: var(--background-50);
   border-bottom: 2px solid var(--background-200);
 
   padding: calc(10vmax / 2);
@@ -178,14 +171,14 @@ body {
     width: fit-content;
     align-items: center;
 
-    background-color: var(--accent-500);
+    background-color: var(--primary-500);
 
-    padding: calc(2vmax / 2);
+    padding: calc(3vmax / 2);
 
     border: none;
 
     &:hover {
-      background-color: var(--accent-400);
+      background-color: var(--primary-400);
     }
   }
 }
