@@ -53,7 +53,7 @@ body {
 }
 
 .ui-card {
-  height: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
   gap: calc(1vmax / 2);
@@ -114,8 +114,8 @@ body {
       text-wrap: balance;
 
       & span {
-        width: calc(10vmax / 2);
-        height: calc(10vmax / 2);
+        width: calc(10vw / 2);
+        height: calc(10vh / 2);
 
         background-color: var(--primary-500);
 
@@ -148,17 +148,6 @@ body {
     & h1 {
       font-size: 2em;
     }
-
-    & p {
-      text-align: justify;
-    }
-  }
-
-  & .overview-image {
-    width: 100%;
-    height: calc(4vmax / 2);
-
-    background-color: var(--primary-500);
   }
 
   & a {
@@ -172,10 +161,12 @@ body {
     align-items: center;
 
     background-color: var(--primary-500);
+    color: var(--text-50);
 
     padding: calc(3vmax / 2);
 
     border: none;
+    border-radius: 5px;
 
     &:hover {
       background-color: var(--primary-400);
@@ -197,6 +188,51 @@ body {
       & .social {
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    width: auto;
+    height: auto;
+  }
+
+  .ui-root {
+    flex-direction: column;
+    height: min-content;
+  }
+
+  .ui-column {
+    height: max-content;
+    max-height: unset;
+    border-right: none !important;
+  }
+
+  .ui-card {
+    height: max-content;
+    justify-content: center;
+
+    & .ui-about-me {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      & .ui-about-me-intro {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    & .ui-socials {
+      & .social {
+        & span {
+          width: calc(30vw / 2);
+          height: calc(30vh / 2);
+        }
       }
     }
   }
