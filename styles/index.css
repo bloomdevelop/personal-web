@@ -92,8 +92,10 @@ body {
   }
 
   & .ui-socials {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
     justify-content: center;
+    gap: 1.2rem;
 
     width: 100%;
 
@@ -114,8 +116,8 @@ body {
       text-wrap: balance;
 
       & span {
-        width: calc(10vw / 2);
-        height: calc(10vh / 2);
+        width: calc(12.5vw / 2);
+        height: calc(12.5vh / 2);
 
         background-color: var(--primary-500);
 
@@ -131,6 +133,11 @@ body {
         }
         &.revolt {
           mask-image: url("../public/images/svgs/question-solid.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
+        }
+        &.guilded {
+          mask-image: url("../public/images/svgs/guilded.svg");
           mask-position: center;
           mask-repeat: no-repeat;
         }
@@ -151,20 +158,18 @@ body {
   }
 
   & a {
-    text-decoration: none;
-  }
-
-  & button {
     display: flex;
     gap: calc(2vmax / 2);
     width: fit-content;
     align-items: center;
-
+    
     background-color: var(--primary-500);
+    
     color: var(--text-50);
-
+    text-decoration: none;
+    
     padding: calc(3vmax / 2);
-
+    
     border: none;
     border-radius: 5px;
 
@@ -181,6 +186,7 @@ body {
     }
 
     & .ui-socials {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
