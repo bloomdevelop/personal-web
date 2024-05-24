@@ -131,8 +131,8 @@ body {
           mask-position: center;
           mask-repeat: no-repeat;
         }
-        &.revolt {
-          mask-image: url("../public/images/svgs/question-solid.svg");
+        &.matrix {
+          mask-image: url("../public/images/svgs/icons8-matrix.svg");
           mask-position: center;
           mask-repeat: no-repeat;
         }
