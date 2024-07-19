@@ -25,7 +25,7 @@ Disallow: /
 User-agent: facebot
 Disallow: /
 
-# Fuck you too Musk.
+# Fuck you too, Musk.
 User-agent: TwitterBot
 Disallow: /
 
