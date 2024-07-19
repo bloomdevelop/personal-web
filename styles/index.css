@@ -122,21 +122,25 @@ body {
         background-color: var(--primary-500);
 
         &.bluesky {
+          mask: url("../public/images/svgs/bluesky.svg") center no-repeat;
           mask-image: url("../public/images/svgs/bluesky.svg");
           mask-position: center;
           mask-repeat: no-repeat;
         }
         &.discord {
+          mask: url("../public/images/svgs/discord.svg") center no-repeat;
           mask-image: url("../public/images/svgs/discord.svg");
           mask-position: center;
           mask-repeat: no-repeat;
         }
         &.matrix {
+          mask: url("../public/images/svgs/matrix.svg") center no-repeat;
           mask-image: url("../public/images/svgs/icons8-matrix.svg");
           mask-position: center;
           mask-repeat: no-repeat;
         }
         &.guilded {
+          mask: url("../public/images/svgs/guilded.svg") center no-repeat;
           mask-image: url("../public/images/svgs/guilded.svg");
           mask-position: center;
           mask-repeat: no-repeat;
