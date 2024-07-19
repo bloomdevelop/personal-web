@@ -69,6 +69,7 @@ body {
 
   & .ui-about-me {
     display: flex;
+    align-items: center;
     gap: 1.2rem;
 
     & .ui-about-me-intro {
@@ -80,14 +81,20 @@ body {
     }
 
     & h1 {
-      font-size: 1.5em;
+      font-size: 2.5em;
     }
 
     & img {
+      transition: border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), height 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);     
+      background-color: var(--primary-300);
       width: calc(30vmax / 2);
       height: calc(30vmax / 2);
 
-      border-radius: 999px;
+      border-radius: 12px;
+
+      &:hover {
+        border-radius: 34px;
+      }
     }
   }
 
@@ -108,7 +115,7 @@ body {
       align-items: center;
 
       width: 100%;
-      height: fit-content;
+      height: max-content;
 
       gap: 1.2rem;
 
@@ -162,23 +169,32 @@ body {
   }
 
   & a {
+    transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1),
+      box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
     display: flex;
     gap: calc(2vmax / 2);
-    width: fit-content;
+    width: max-content;
     align-items: center;
+    box-shadow: none;
+    outline: none;
     
     background-color: var(--primary-500);
     
     color: var(--text-50);
     text-decoration: none;
     
-    padding: calc(3vmax / 2);
+    padding: calc(2vmax / 2);
     
     border: none;
     border-radius: 5px;
 
     &:hover {
-      background-color: var(--primary-400);
+      background-color: var(--primary-600);
+      box-shadow: 0 0 0 2px var(--primary-500);
+    }
+    &:focus, &:focus-visible, &:focus-within {
+      background-color: var(--primary-600);
+      box-shadow: 0 0 0 3px var(--primary-300);
     }
   }
 }
