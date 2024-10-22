@@ -15,9 +15,12 @@ User-agent: Slurp
 Allow: /
 Crawl-delay: 10
 
-# AI and other crawlers: You can't win, let us crawl ur site.
-# Me: Nah I'd win.
+# Internet Archive, love you <3
+User-agent: ia_archiver
+Allow: *
+Crawl-delay: 10
 
+# No indxing for AI
 User-agent: Baiduspider
 Disallow: /
 
