@@ -1,118 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <!-- Title -->
     <title>Bloom's Site</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon" />
     <!-- Web Scrapping -->
-    <meta name="Googlebot"
-        content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache">
-    <meta name="Bingbot"
-        content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache">
+    <meta
+      name="Googlebot"
+      content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache"
+    />
+    <meta
+      name="Bingbot"
+      content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache"
+    />
     <!-- Embeds -->
-    <meta name="description" content="A new personal web made by Bloom Perez">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A new personal web made by Bloom Perez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./styles/index.css">
-    </script>
+    <link rel="stylesheet" href="./styles/index.css" />
     <!-- Caching -->
     <meta http-equiv="Cache-control" content="max-age=31536000" />
-</head>
+  </head>
 
-<body class="ui">
-    <main class="ui-root">
-        <div class="ui-column">
-            <div class="ui-card">
-                <div class="ui-about-me">
-                    <img sizes="(max-width: 800px) 100vw, 800px" srcset="
-./public/images/profile/IMG_0831_rgaxsy_c_scale,w_200.webp 200w,
-./public/images/profile/IMG_0831_rgaxsy_c_scale,w_410.webp 410w,
-./public/images/profile/IMG_0831_rgaxsy_c_scale,w_582.webp 582w,
-./public/images/profile/IMG_0831_rgaxsy_c_scale,w_747.webp 747w,
-./public/images/profile/IMG_0831_rgaxsy_c_scale,w_800.webp 800w"
-                        src="./public/images/profile/IMG_0831_rgaxsy_c_scale,w_800.webp" alt="" />
-                    <div class="ui-about-me-intro">
-                        <h1>Hello!</h1>
-                        <p>I'm Bloom, an gay catboy who likes to program some apps but am kinda lazy :(</p>
-                        <a tabindex="1" aria-label="Send a mail" href="mailto:contact.ab0fj@slmail.me">Send a mail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui-card">
-                <div class="ui-socials">
-                    <div class="social">
-                        <span class="bluesky"></span>
-                        <h1>Bluesky</h1>
-                        <p>@bloom.swifties.social</p>
-                        <p>Rarely posts something.</p>
-                        <a aria-label="Go to my profile" tabindex="2" href="https://bsky.app/profile/bloom.swifties.social">Go to my
-                            profile</a>
-                    </div>
-                    <div class="social">
-                        <span class="discord"></span>
-                        <h1>Discord</h1>
-                        <p>@bloomdevelop.gay</p>
-                        <p>Feel free to send an friend request if you want.</p>
-                    </div>
-                    <div class="social">
-                        <span class="matrix"></span>
-                        <h1>Matrix</h1>
-                        <p>@bloomdevelop.gay:matrix.org</p>
-                        <p>Created an account, nothing more.</p>
-                    </div>
-                </div>
-            </div>
+  <body>
+    <div class="card">
+      <h1>Hello World</h1>
+      <p>
+        Hello, I'm Bloom Perez, welcome to my personal website, although is in
+        work in progress, so there will be a lot of changes overtime. I'm a programmer and web/mobile designer, I've been working with the upcoming Revolt client called Crescent a small android application designed to be more like Whatsapp, Signal and others chat applications
+      </p>
+      <p>Also, I'm 17 years old by the way, I'm a furry but also a gay, so please <b>do don't harass or going against me</b></p>
+    </div>
+    <div class="card">
+      <h1>Projects</h1>
+      <p>Experimenting something with this new layout</p>
+    </div>
+    <div class="card">
+      <h1>Links</h1>
+      <a href="https://bsky.app/profile/spring.furrest.online">
+        <img alt="Bluesky Logo (icon by Font Awesome)" src="/public/images/svgs/bluesky.svg" />
+        <div>
+          <h1>Bluesky</h1>
+          <p>@spring.furrest.online</p>
         </div>
-        <div class="ui-column">
-            <div class="ui-card">
-                <div class="ui-project">
-                    <h1>Crescent</h1>
-                    <p>Crescent is a FOSS client for the Revolt protocol, that aims to provide a streamlined chatting
-                        experience for both new and returning users by taking heavy inspiration from other chatting
-                        applications such as Signal, WhatsApp and Telegram.</p>
-                    <a tabindex="3" aria-disabled="true" aria-label="Go to Crescent's Repository" href="#">
-                        Go to Crescent's Repository (Private)
-                    </a>
-                </div>
-            </div>
-            <div class="ui-card">
-                <div class="ui-project">
-                    <h1>My Blog</h1>
-                    <p>Built with Astro, sometimes I post posts about my projects, sometimes I just post random
-                    </p>
-                    <a tabindex="4" aria-label="Go to Blog" href="https://bloom-blog.vercel.app/">
-                        Go to Blog
-                    </a>
-                </div>
-            </div>
-            <div class="ui-card">
-                <div class="ui-project">
-                    <h1>Gemini for Revolt (Discontinued)</h1>
-                    <p>
-                        Not a intergation, instead it's an bot that is very bugged due of bad code (yeah blame me for
-                        that). This project was discontinued.
-                    </p>
-                    <a tabindex="5" aria-label="Go to rvlt-gemini's Repository" href="https://github.com/bloomdevelop/rvlt-gemini">
-                        Go to rvlt-gemini's Repository
-                    </a>
-                </div>
-            </div>
-            <div class="ui-card">
-                <div class="ui-project">
-                    <h1>Feather</h1>
-                    <p>
-                        A upcoming client for revolt.chat, it aims to be easy to use, also it does an modern, sleek design.
-                    </p>
-                    <a tabindex="6" aria-label="Go to rvlt-gemini's Repository" href="https://github.com/bloomdevelop/feather">
-                        Go to Feather Repository
-                    </a>
-                </div>
-            </div>
+      </a>
+      <a href="https://github.com/bloomdevelop">
+        <img alt="Github Logo (icon by Font Awesome)" src="/public/images/svgs/github.svg" />
+        <div>
+          <h1>Github</h1>
+          <p>@bloomdevelop</p>
         </div>
-    </main>
-</body>
-
+      </a>
+      <a href="mailto:contact.ab0fj@slmail.me">
+        <img alt="Envelope Icon (icon by Font Awesome)" src="/public/images/svgs/envelope.svg" />
+        <div>
+          <h1>Send via Email</h1>
+          <p>Note: Do don't abuse it</p>
+        </div>
+      </a>
+      <a href="/rules.html">
+        <img alt="Scroll Icon (icon by Font Awesome)" src="/public/images/svgs/scroll.svg" />
+        <div>
+          <h1>DM and Email Rules</h1>
+          <p>Relatively important! You must read first before DM'ing or emailing me</p>
+        </div>
+      </a>
+    </div>
+  </body>
 </html>

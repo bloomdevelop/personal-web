@@ -1,0 +1,17 @@
+@import url("../public/fonts/inter/inter.css");
+@import url("./colorscheme.css");
+
+:root {
+    font-family: "InterDisplay", sans-serif;
+}
+
+html, body {
+    background: var(--background-50);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
