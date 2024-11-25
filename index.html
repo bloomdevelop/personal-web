@@ -121,29 +121,9 @@
     <script src="https://unpkg.com/openpgp@5.5.0/dist/openpgp.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
-        let corsProxy;
-        let url;
+        const corsProxy = "https://api.cors.lol/?url=";
         const fingerprint = "DA9632A366B6DD550A543CCFD3419DE170B1EAC9";
-
-        function isLocalhost() {
-          const hostname = window.location.hostname;
-          return (
-            hostname === "localhost" ||
-            hostname === "127.0.0.1" ||
-            hostname === "" ||
-            hostname.startsWith("192.168.") ||
-            hostname.startsWith("10.") ||
-            hostname.endsWith(".local")
-          );
-        }
-
-        if (isLocalhost()) {
-          corsProxy = "https://cors-anywhere.herokuapp.com/";
-          url = `${corsProxy}https://keys.openpgp.org/vks/v1/by-fingerprint/${fingerprint}`;
-        } else {
-          corsProxy = "";
-          url = `https://keys.openpgp.org/vks/v1/by-fingerprint/${fingerprint}`;
-        }
+        const url = `${corsProxy}https://keys.openpgp.org/vks/v1/by-fingerprint/${fingerprint}`;
 
         const pgpKey = await fetch(url, {
           method: "GET",
