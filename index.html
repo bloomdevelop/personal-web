@@ -29,44 +29,154 @@
       <h1>Hello World</h1>
       <p>
         Hello, I'm Bloom Perez, welcome to my personal website, although is in
-        work in progress, so there will be a lot of changes overtime. I'm a programmer and web/mobile designer, I've been working with the upcoming Revolt client called Crescent a small android application designed to be more like Whatsapp, Signal and others chat applications
+        work in progress, so there will be a lot of changes overtime. I'm a
+        programmer and web/mobile designer, I've been working with the upcoming
+        Revolt client called Crescent a small android application designed to be
+        more like Whatsapp, Signal and others chat applications
       </p>
-      <p>Also, I'm 17 years old by the way, I'm a furry but also a gay, so please <b>do don't harass or going against me</b></p>
+      <p>
+        Also, I'm 17 years old by the way, I'm a furry but also a gay, so please
+        <b>do don't harass or going against me</b>
+      </p>
+
+      <div id="verification-container" data-status="">
+        <p>
+          Verification Status (via PGP key):
+          <span id="verification-status">Loading...</span>
+        </p>
+      </div>
     </div>
     <div class="card">
       <h1>Projects</h1>
-      <p>Experimenting something with this new layout</p>
+      <a href="https://github.com/bloomdevelop/Silk" target="_blank">
+        <div>
+          <h1>Silk</h1>
+          <p>The multi-purpose revolt.js bot created using typescript. Derived from stationbot which is no longer exist</p>
+        </div>
+      </a>
+      <a href="https://github.com/upryzing/crescent" target="_blank">
+        <div>
+          <h1>Crescent</h1>
+          <p>
+            DM-focused mobile app for Upryzing, built with Kotlin and Jetpack Compose 
+          </p>
+        </div>
+      </a>
+      <a href="https://github.com/bloomdevelop/tasks" target="_blank">
+        <div>
+          <h1>Tasks</h1>
+          <p>
+            A simple task manager made with Solid.js and headless components
+          </p>
+        </div>
+      </a>
     </div>
     <div class="card">
       <h1>Links</h1>
       <a href="https://bsky.app/profile/spring.furrest.online">
-        <img alt="Bluesky Logo (icon by Font Awesome)" src="/public/images/svgs/bluesky.svg" />
+        <img
+          alt="Bluesky Logo (icon by Font Awesome)"
+          src="/public/images/svgs/bluesky.svg"
+        />
         <div>
           <h1>Bluesky</h1>
           <p>@spring.furrest.online</p>
         </div>
       </a>
       <a href="https://github.com/bloomdevelop">
-        <img alt="Github Logo (icon by Font Awesome)" src="/public/images/svgs/github.svg" />
+        <img
+          alt="Github Logo (icon by Font Awesome)"
+          src="/public/images/svgs/github.svg"
+        />
         <div>
           <h1>Github</h1>
           <p>@bloomdevelop</p>
         </div>
       </a>
       <a href="mailto:contact.ab0fj@slmail.me">
-        <img alt="Envelope Icon (icon by Font Awesome)" src="/public/images/svgs/envelope.svg" />
+        <img
+          alt="Envelope Icon (icon by Font Awesome)"
+          src="/public/images/svgs/envelope.svg"
+        />
         <div>
           <h1>Send via Email</h1>
           <p>Note: Do don't abuse it</p>
         </div>
       </a>
       <a href="/rules.html">
-        <img alt="Scroll Icon (icon by Font Awesome)" src="/public/images/svgs/scroll.svg" />
+        <img
+          alt="Scroll Icon (icon by Font Awesome)"
+          src="/public/images/svgs/scroll.svg"
+        />
         <div>
           <h1>DM and Email Rules</h1>
-          <p>Relatively important! You must read first before DM'ing or emailing me</p>
+          <p>
+            Relatively important! You must read first before DM'ing or emailing
+            me
+          </p>
         </div>
       </a>
     </div>
+
+    <script src="https://unpkg.com/openpgp@5.5.0/dist/openpgp.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        let corsProxy;
+        let url;
+        const fingerprint = "DA9632A366B6DD550A543CCFD3419DE170B1EAC9";
+
+        function isLocalhost() {
+          const hostname = window.location.hostname;
+          return (
+            hostname === "localhost" ||
+            hostname === "127.0.0.1" ||
+            hostname === "" ||
+            hostname.startsWith("192.168.") ||
+            hostname.startsWith("10.") ||
+            hostname.endsWith(".local")
+          );
+        }
+
+        if (isLocalhost()) {
+          corsProxy = "https://cors-anywhere.herokuapp.com/";
+          url = `${corsProxy}https://keys.openpgp.org/vks/v1/by-fingerprint/${fingerprint}`;
+        } else {
+          corsProxy = "";
+          url = `https://keys.openpgp.org/vks/v1/by-fingerprint/${fingerprint}`;
+        }
+
+        const pgpKey = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/pgp-keys",
+          },
+        });
+
+        if (!pgpKey.ok) {
+          const verificationContainer = document.getElementById(
+            "verification-container"
+          );
+          const verificationStatus = document.getElementById(
+            "verification-status"
+          );
+          verificationContainer.dataset.status = "not-verified";
+          verificationStatus.textContent = "Not Verified";
+        }
+
+        if (pgpKey) {
+          const verificationContainer = document.getElementById(
+            "verification-container"
+          );
+          const verificationStatus = document.getElementById(
+            "verification-status"
+          );
+          verificationContainer.dataset.status = "verified";
+          verificationStatus.textContent = "Verified";
+        } else {
+          verificationContainer.dataset.status = "not-verified";
+          verificationStatus.textContent = "Not Verified";
+        }
+      });
+    </script>
   </body>
 </html>

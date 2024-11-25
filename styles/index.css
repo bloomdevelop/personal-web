@@ -8,7 +8,6 @@
 }
 
 html, body {
-    height: 100%;
     width: 100%;
     background: var(--background-50);
 }
@@ -39,6 +38,30 @@ body {
             text-align: justify;
         }
 
+        & #verification-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-inline: auto;
+            gap: 1rem;
+            padding: 15px 10px;
+            background: var(--background-200);
+            border-radius: .3rem;
+            text-decoration: none;
+            color: var(--text-900);
+        }
+
+        & #verification-container[data-status="verified"] {
+            background: #34c759;
+            color: #fff;
+        }
+
+        & #verification-container[data-status="not-verified"] {
+            background: #ff0000;
+            color: #fff;
+        }
+
         & a {
             display: flex;
             flex-direction: row;
@@ -51,8 +74,8 @@ body {
             color: var(--text-900);
 
             & img {
-                width: 4rem;
-                height: 4rem;
+                width: 2.5rem;
+                height: 2.5rem;
                 border-radius: .5rem;
             }
 
@@ -104,8 +127,8 @@ body {
     }
     
     .card a img {
-        width: 4rem;
-        height: 4rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background: var(--background-300);
         border-radius: .5rem;
     }
@@ -123,4 +146,28 @@ body {
     .card a div p {
         color: var(--text-500);
     }    
+
+    #verification-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-inline: auto;
+        gap: 1rem;
+        padding: 15px 10px;
+        background: var(--background-200);
+        border-radius: .3rem;
+        text-decoration: none;
+        color: var(--text-900);
+    }
+
+    #verification-container[data-status="verified"] {
+        background: #34c759;
+        color: #fff;
+    }
+
+    #verification-container[data-status="not-verified"] {
+        background: #ff0000;
+        color: #fff;
+    }
 }
