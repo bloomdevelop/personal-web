@@ -1,162 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Title -->
-    <title>Bloom's Site</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon" />
-    <!-- Web Scrapping -->
-    <meta
-      name="Googlebot"
-      content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache"
-    />
-    <meta
-      name="Bingbot"
-      content="all|none, index|noindex, follow|nofollow, notranslate, noydir, noodp, noarchive, snippet|nosnippet, noimageindex, nocache"
-    />
-    <!-- Embeds -->
-    <meta name="description" content="A new personal web made by Bloom Perez" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="./styles/index.css" />
-    <!-- Caching -->
-    <meta http-equiv="Cache-control" content="max-age=31536000" />
-  </head>
-
-  <body>
-    <div class="card">
-      <h1>Hello World</h1>
-      <p>
-        Hello, I'm Bloom Perez, welcome to my personal website, although is in
-        work in progress, so there will be a lot of changes overtime. I'm a
-        programmer and web/mobile designer, I've been working with the upcoming
-        Revolt client called Crescent a small android application designed to be
-        more like Whatsapp, Signal and others chat applications
-      </p>
-      <p>
-        Also, I'm 17 years old by the way, I'm a furry but also a gay, so please
-        <b>do don't harass or going against me</b>
-      </p>
-
-      <div id="verification-container" data-status="">
-        <p>
-          Verification Status (via PGP key):
-          <span id="verification-status">Loading...</span>
-        </p>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Classic UI Test</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello Visitor!</h1>
+        <div class="toolbar">
+            <span>Social Links</span>
+            <a href="mailto:contact.ab0fj@slmail.me"><button>Email</button></a>
+            <a href="https://bsky.app/profile/spring.furrest.online" target="_blank" rel="noreferrer noopener"><button>Bluesky</button></a>
+            <a href="https://github.com/bloomdevelop" target="_blank" rel="noreferrer noopener"><button>Github</button></a>
+            <a href="https://git.gay/bloomdevelop" target="_blank" rel="noreferrer noopener"><button>Git (git.gay)</button></a>
+        </div>
+        <div class="toolbar">
+            <span>Others</span>
+            <a href="https://keys.openpgp.org/search?q=DA9632A366B6DD550A543CCFD3419DE170B1EAC9" target="_blank" rel="noreferrer noopener"><button>PGP Public Key</button></a>
+            <a href="/rules.html"><button>DMS and Email Rules</button></a>
+        </div>
     </div>
-    <div class="card">
-      <h1>Projects</h1>
-      <a href="https://github.com/bloomdevelop/Silk" target="_blank">
-        <div>
-          <h1>Silk</h1>
-          <p>The multi-purpose revolt.js bot created using typescript. Derived from stationbot which is no longer exist</p>
+    <div class="cr-card">
+        <div class="pride-ribbon"></div>
+        <span>About me</span>
+        <div class="list">
+            <p>My name is Bloom Perez, I'm 17 years old also my pronous is <b>he/him</b>, I love developing stuff, even designing the website's UI.</p>
+            <p>Also I'm a furry and gay at same time, but I do support LGBT+ community</p>
+            <hr/>
+            <p>Remember to read the rules at others toolbar before contacting me, thanks! ^^</p>
         </div>
-      </a>
-      <a href="https://github.com/upryzing/crescent" target="_blank">
-        <div>
-          <h1>Crescent</h1>
-          <p>
-            DM-focused mobile app for Upryzing, built with Kotlin and Jetpack Compose 
-          </p>
-        </div>
-      </a>
-      <a href="https://github.com/bloomdevelop/tasks" target="_blank">
-        <div>
-          <h1>Tasks</h1>
-          <p>
-            A simple task manager made with Solid.js and headless components
-          </p>
-        </div>
-      </a>
     </div>
-    <div class="card">
-      <h1>Links</h1>
-      <a href="https://bsky.app/profile/spring.furrest.online">
-        <img
-          alt="Bluesky Logo (icon by Font Awesome)"
-          src="./public/images/svgs/bluesky.svg"
-        />
-        <div>
-          <h1>Bluesky</h1>
-          <p>@spring.furrest.online</p>
-        </div>
-      </a>
-      <a href="https://github.com/bloomdevelop">
-        <img
-          alt="Github Logo (icon by Font Awesome)"
-          src="./public/images/svgs/github.svg"
-        />
-        <div>
-          <h1>Github</h1>
-          <p>@bloomdevelop</p>
-        </div>
-      </a>
-      <a href="mailto:contact.ab0fj@slmail.me">
-        <img
-          alt="Envelope Icon (icon by Font Awesome)"
-          src="./public/images/svgs/envelope.svg"
-        />
-        <div>
-          <h1>Send via Email</h1>
-          <p>Note: Do don't abuse it</p>
-        </div>
-      </a>
-      <a href="rules.html">
-        <img
-          alt="Scroll Icon (icon by Font Awesome)"
-          src="./public/images/svgs/scroll.svg"
-        />
-        <div>
-          <h1>DM and Email Rules</h1>
-          <p>
-            Relatively important! You must read first before DM'ing or emailing
-            me
-          </p>
-        </div>
-      </a>
-    </div>
-
-    <script src="https://unpkg.com/openpgp@5.5.0/dist/openpgp.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        const corsProxy = "https://api.cors.lol/?url=";
-        const fingerprint = "DA9632A366B6DD550A543CCFD3419DE170B1EAC9";
-        const url = `${corsProxy}https://keys.openpgp.org/vks/v1/by-fingerprint/${fingerprint}`;
-
-        const pgpKey = await fetch(url, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/pgp-keys",
-          },
-        });
-
-        if (!pgpKey.ok) {
-          const verificationContainer = document.getElementById(
-            "verification-container"
-          );
-          const verificationStatus = document.getElementById(
-            "verification-status"
-          );
-          verificationContainer.dataset.status = "not-verified";
-          verificationStatus.textContent = "Not Verified";
-        }
-
-        if (pgpKey) {
-          const verificationContainer = document.getElementById(
-            "verification-container"
-          );
-          const verificationStatus = document.getElementById(
-            "verification-status"
-          );
-          verificationContainer.dataset.status = "verified";
-          verificationStatus.textContent = "Verified";
-        } else {
-          verificationContainer.dataset.status = "not-verified";
-          verificationStatus.textContent = "Not Verified";
-        }
-      });
-    </script>
-  </body>
+</body>
 </html>

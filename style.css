@@ -1,0 +1,122 @@
+:root {
+    --default-state-bg: hsl(0, 0%, 100%);
+    --active-state-bg: hsl(0, 0%, 95%);
+    --default-state-border: hsl(0, 0%, 80%);
+    --hover-state-border: hsl(0, 0%, 70%);
+    font-family: Arial, sans-serif;
+}
+
+:root,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-inline: 5rem;
+    margin-bottom: 5rem;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, .5);
+}
+
+button {
+    transition: all 150ms ease-in-out;
+    padding: 5px 10px;
+    background-color: var(--default-state-bg);
+    border: 1px solid;
+    border-color: var(--default-state-border);
+    border-radius: 5px;
+    max-width: max-content;
+}
+
+button:hover {
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .15), 0 2px 5px rgba(0, 0, 0, .2);
+    background-color: var(--default-state-bg);
+    border-color: var(--hover-state-border);
+}
+
+button:active {
+    box-shadow: inset 0 0px 3.5px rgba(0, 0, 0, .35);
+    background-color: var(--active-state-bg);
+    border-color: var(--default-state-border);
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: stretch;
+}
+
+.container > h1 {
+    text-align: center;
+}
+
+
+
+a:has(button) {
+    color: unset;
+    text-decoration: none;
+}
+
+.cr-card {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(225, 236, 254);
+    padding: 3px 10px 3px 9px;
+    border-radius: 5px;
+}
+
+.cr-card>span {
+    font-size: 11pt;
+    font-weight: bold;
+    min-height: 25px;
+    line-height: 25px;
+    margin-block-end: 4px;
+}
+
+.cr-card>.list {
+    flex-direction: column;
+}
+
+.cr-card >.pride-ribbon {
+    position: absolute;
+    rotate: -45deg;
+    right: 0;
+    top: -30px;
+    content: "";
+    width: 25px;
+    height: 100px;
+    background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.toolbar {
+    display: flex;
+    box-sizing: unset;
+    padding-inline: 10px;
+    align-items: center;
+    border: 1px solid hsla(229, calc(38.3% - 2%), 62%, 0.3125);
+    border-radius: 5px;
+    margin-block-start: 5px;
+    padding-block: 5px;
+    gap: 20px;
+    background-color: hsl(229, 38.3%, calc(62% + 37%));
+}
+
+.toolbar > span {
+    font-weight: bold;
+    font-size: 10pt;
+}
