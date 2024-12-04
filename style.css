@@ -31,7 +31,7 @@ hr {
    align-items: stretch;
 }
 
-.container > h1, p {
+.container > h1 {
     text-align: center;
 }
 
