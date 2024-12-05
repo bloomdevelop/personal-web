@@ -21,6 +21,7 @@
 :root #main {
     margin-block-start: 10px;
     margin-inline: auto;
+    align-items: start;
     width: 864px;
     gap: 10px;
     transition-property: height, width;
@@ -38,6 +39,11 @@
 .hbox,
 .vbox {
     display: flex;
+}
+
+.nogap {
+    gap: 0 !important;
+    margin-block-end: 0 !important;
 }
 
 #projects {
@@ -143,4 +149,45 @@
             green 60% 80%,
             blue 80%);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+    :root  #main {
+        width: 684px;
+        margin-inline: calc(50% - 342px);
+        height: auto;
+    }
+
+    :root #projectstiles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    :root  #main {
+        width: 484px;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+    }
+
+    :root #projectstiles {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+/* Column Only on mobile */
+@media (max-width: 500px) {
+
+    :root #main {
+        width: 100%;
+        margin-inline: auto;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    :root #main.hbox {
+        flex-direction: column;
+    }
 }
