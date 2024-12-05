@@ -14,8 +14,8 @@
 }
 
 :root #main-container {    
-    margin-block-start: 10px;
     flex: 1;
+    height: 100vh;
 }
 
 :root #main {
