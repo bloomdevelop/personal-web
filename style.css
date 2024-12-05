@@ -1,49 +1,51 @@
 :root {
-    --default-state-bg: hsl(0, 0%, 100%);
-    --active-state-bg: hsl(0, 0%, 95%);
-    --default-state-border: hsl(0, 0%, 80%);
-    --hover-state-border: hsl(0, 0%, 70%);
     font-family: Arial, sans-serif;
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
 }
 
-:root,
-body {
-	margin: 0;
-	padding: 0;
-}
-
-body {
+:root body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-inline: 5rem;
-    margin-bottom: 5rem;
+    background-color: #fff;
 }
 
-hr {
-    border-top: 1px solid rgba(0, 0, 0, .5);
+:root #main-container {    
+    margin-block-start: 10px;
+    flex: 1;
 }
 
-.container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: stretch;
+:root #main {
+    margin-block-start: 10px;
+    margin-inline: auto;
+    width: 864px;
+    gap: 10px;
+    transition-property: height, width;
+    transition-duration: 0.12s;
 }
 
-.container > h1 {
-    text-align: center;
+.vbox {
+    flex-direction: column;
 }
 
-.cr-card {
-    position: relative;
-    overflow: hidden;
-    background-color: rgb(225, 236, 254);
-    padding: 3px 10px 3px 9px;
-    border-radius: 5px;
+.hbox {
+    flex-direction: row;
 }
 
-.cr-card>span {
+.hbox,
+.vbox {
+    display: flex;
+}
+
+#projects {
+    padding-block-end: 12px;
+}
+
+:root .section-title {
+    color: black;
     font-size: 11pt;
     font-weight: bold;
     min-height: 25px;
@@ -51,11 +53,82 @@ hr {
     margin-block-end: 4px;
 }
 
-.cr-card>.list {
-    flex-direction: column;
+:root #projectsintro {
+    position: relative;
 }
 
-.cr-card >.pride-ribbon {
+:root #projectstiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+:root #projectstiles .thumbnail-title {
+    margin-block-start: 6px;
+    padding: 1px 0px 4px 0;
+    color: rgb(0, 0, 204);
+}
+
+:root #projectstiles .thumbnail-title image {
+    width: 16px;
+    height: 16px;
+    margin-inline-end: 6px;
+}
+
+:root #projectstiles .thumbnail-title label {
+    white-space: nowarp;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+:root #projectstiles .thumbnail {
+    background-position: top center;
+    background-size: cover;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(204, 204, 204);
+    height: 136px;
+    width: 195px;
+    transition-property: height, width;
+    transition-duration: 0.12s;
+}
+
+:root #sidebar {
+    width: 230px;
+    gap: 10px;
+}
+
+:root #logo {
+    background-image: url(/resources/home-page.png);
+    height: 52px;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+:root #aboutme {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgb(255, 236, 254);
+}
+
+:root .sidebar {
+    padding: 3px 10px 3px 9px;
+}
+
+:root .link {
+    color: rgb(0, 0, 204);
+    display: flex;
+    height: 21px;
+    -moz-context-properties: fill, fill-opacity;
+}
+
+:root .link label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pride-ribbon {
     position: absolute;
     rotate: -45deg;
     right: 0;
@@ -63,41 +136,11 @@ hr {
     content: "";
     width: 25px;
     height: 100px;
-    background: linear-gradient(
-    to right,
-    red 20%,
-    orange 20% 40%,
-    yellow 40% 60%,
-    green 60% 80%,
-    blue 80%
-  );
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
-.toolbar {
-    display: flex;
-    box-sizing: unset;
-    flex-wrap: wrap;
-    padding-inline: 10px;
-    align-items: center;
-    border: 1px solid hsla(229, calc(38.3% - 2%), 62%, 0.3125);
-    border-radius: 5px;
-    margin-block-start: 5px;
-    padding-block: 5px;
-    gap: 20px;
-    background-color: hsl(229, 38.3%, calc(62% + 37%));
-}
-
-.toolbar > a, span {
-    font-size: 10pt;
-}
-
-.toolbar > span {
-    font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        margin-inline: 1rem;
-    }
+    background: linear-gradient(to right,
+            red 20%,
+            orange 20% 40%,
+            yellow 40% 60%,
+            green 60% 80%,
+            blue 80%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
