@@ -122,6 +122,7 @@
 }
 
 :root .link {
+    cursor: pointer;
     color: rgb(0, 0, 204);
     display: flex;
     height: 21px;
